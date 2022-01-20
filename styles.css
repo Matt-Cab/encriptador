@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg-color: #F3F5FC;
+    --btn-color: #0A3871;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1160px;
+    width: 100%;
+    max-height: 944px;
+    height: calc(100vh - 80px);
+}
+
+.btn.btn-more-info {
+    position: absolute;
+    left: 40px;
+    display: inline-block;
+    padding: 5px;
+    width: 70px;
+}
+
+.btns-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.encrypt_unencrypt-container {
+    width: 100%;
+    max-width: 680px;
+}
+
+.encrypt_unencrypt-container .info {
+    margin-block: 16px;
+    display: block;
+    width: 100%;
+    font-size: .80rem;
+    position: relative;
+}
+
+.encrypt_unencrypt-container .info .info-sign {
+    margin-right: 4px;
+    position: relative;
+    top: 3px;
+}
+
+
+.result-container {
+    background-color: #fff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    max-width: 400px;
+    max-height: 944px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result__info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+::placeholder {
+    color: var(--btn-color);
+    opacity: 1;
+}
+
+textarea {
+    width: 100%;
+    height: 75%;
+    border: none;
+    padding-block: 5px;
+    outline: none;
+    resize: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.encrypt_unencrypt-container textarea {
+    background-color: var(--bg-color);
+    color: var(--btn-color);
+    margin-top: 80px;
+    font-size: 1.5rem;
+}
+
+.result-container img.decoration {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.result-container p {
+    text-align: center;
+}
+
+.result-container p.msg {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.result-container textarea {
+    background-color: #fff;
+    height: 100%;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 24px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: .9rem;
+    transition: box-shadow .3s, opacity .3s;
+    box-shadow: 0 0 0 1px var(--btn-color);
+    opacity: .9;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn.blue-bg {
+    background-color: var(--btn-color);
+    color: #fff;
+}
+
+.btn.blue-bg:hover {
+    box-shadow: 0 0 0 3pt var(--btn-color);
+}
+
+.btn.transparent-bg {
+    background-color: transparent;
+}
+
+.btn.blue-color {
+    color: var(--btn-color);
+}
+
+.btn.blue-color:hover {
+    box-shadow: 0 0 0 2pt var(--btn-color);
+}
+
+/*  ------------------------ modal styles ------------------------- */
+
+.modal {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__msg-container {
+    background-color: var(--btn-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 32px;
+}
+
+.modal__msg-container p {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal__btn-close {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    color: var(--btn-color);
+    font-weight: bold;
+    opacity: .85;
+    transition: opacity .3s;
+}
+
+.modal__btn-close:hover {
+    opacity: 1;
+}
+
+/* ---------------------------- MEDIA QUERIES ---------------------------------*/
+
+@media (max-width: 768px) {
+
+    .main-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+    }
+
+    .btn.btn-more-info {
+        top: 73.42px;
+    }
+
+    .encrypt_unencrypt-container {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .result-container {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .result-container img.decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+
+    body {
+        padding: 16px;
+    }
+
+    .btn.btn-more-info {
+        top: 24px;
+        left: 16px;
+    }
+
+    .btns-container {
+        flex-direction: column;
+    }
+}

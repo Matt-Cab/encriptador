@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./menu.css">
+    <script defer src="./js/encrypt.js"></script>
+    <script defer src="./js/menu.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <button class="btn btn-more-info blue-bg white-color">+ Info</button>
+        <div class="encrypt_unencrypt-container">
+            <textarea name="text" id="inputEncryptUnencrypt" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <p class="info"><img class="info-sign" src="./assets/info-sign.svg" alt="info sign"> Solo letras minúsculas y sin acentos</p>
+            <div class="btns-container">
+                <button id="btnEncrypt" class="btn blue-bg white-color">Encriptar</button>
+                <button id="btnUnencrypt" class="btn transparent-bg blue-color">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div class="result__info-container">
+                <img class="decoration" src="./assets/decoration.svg" alt="decoration image">
+                <p class="msg">Ningún mensaje fue encontrado</p>
+                <p class="info">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea disabled class="hidden" name="result" id="inputResult" cols="30"></textarea>
+            <button id="btnCopy" class="hidden btn transparent-bg blue-color">Copiar</button>
+        </div>
+    </div>
+
+    <!-- ------------------------------menu ----------------------------- -->
+    <div class="menu">
+        <button class="btn-close">X</button>
+        <div class="info-container">
+            <p class="menu__info">
+                Encriptador/Desencriptador creado por Matias Gabriel Cabrera
+            </p>
+            <a href="https://github.com/Matt-Cab" target="_blank">Visitar mi página en Github</a>
+        </div>
+    </div>
+</body>
+</html>
